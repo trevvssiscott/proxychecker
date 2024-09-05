@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <title>Proxy Checker for Linux</title>
+        <link rel="stylesheet" href="button.css">
+<link rel="icon" type="image/x-icon" href="proxy_web.ico">
+        <style>
+            /* Import the custom font */
+            @font-face {
+                font-family: 'Steelar';
+                src: url('Steelar-j9Vnj.otf') format('opentype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            /* General body styling */
+            body {
+                background-image: url('background.png'); /* Path to your background image */
+                background-color: #212121; /* Background color as a fallback */
+                background-size: cover; /* Ensure the image covers the entire background */
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Prevent the image from repeating */
+                margin: 0;
+                padding: 0;
+                height: 100vh; /* Ensure the body covers the full height of the viewport */
+                font-family: 'Steelar', sans-serif; /* Apply custom font */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            /* Ribbon Navigation */
+            .ribbon {
+                padding: 20px 0; /* Increased top and bottom padding */
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                /* Initial hidden state */
+                opacity: 0;
+                transform: translateY(-100%);
+                /* Apply animation */
+                animation: slideIn 1s ease-out forwards, fadeIn 1s ease-out forwards;
+            }
+
+            /* Keyframes for slide and fade animations */
+            @keyframes slideIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            /* Ribbon Buttons */
+            .ribbon-buttons {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .ribbon-buttons li {
+                margin: 0 30px; /* Increased spacing between buttons */
+            }
+
+            .ribbon-buttons a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.1em;
+                position: relative;
+                padding: 10px 0;
+                transition: color 0.3s;
+                font-family: 'Steelar', sans-serif; /* Apply custom font */
+            }
+
+            .ribbon-buttons a::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                display: block;
+                margin-top: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: white;
+                transition: width 0.3s;
+            }
+
+            .ribbon-buttons a:hover::after {
+                width: 100%;
+            }
+
+            /* Keyframes for the text and button animations */
+            @keyframes slideUpFadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Main content styling */
+            .main-content {
+                max-width: 600px; /* Adjust width if needed */
+                margin: 0 auto; /* Center horizontally */
+            }
+
+            .main-title {
+                font-size: 3em; /* Main title size */
+                margin-bottom: 10px; /* Space between title and paragraph */
+                color: white; /* Text color */
+                /* Animation for the main title */
+                opacity: 0;
+                animation: slideUpFadeIn 0.5s ease-out forwards;
+            }
+
+            .main-paragraph {
+                font-size: 1.1em; /* Smaller size for paragraph */
+                margin-bottom: 20px; /* Space between paragraph and button */
+                color: white; /* Text color */
+                /* Animation for the paragraph, delayed by 0.5s */
+                opacity: 0;
+                animation: slideUpFadeIn 0.5s ease-out forwards;
+                animation-delay: 0.5s;
+            }
+
+            /* Download button */
+            .button {
+                /* Existing styles from button.css will be applied */
+                font-family: 'Steelar', sans-serif; /* Apply custom font */
+                /* Animation for the button, delayed by 1 second */
+                opacity: 0;
+                animation: slideUpFadeIn 0.5s ease-out forwards;
+                animation-delay: 1s;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Ribbon Navigation -->
+        <nav class="ribbon">
+            <ul class="ribbon-buttons">
+                <li><a href="maintenance" target="_blank">Usage</a></li>
+                <li><a href="maintenance" target="_blank">Tutorial</a></li>
+                <li><a href="maintenance" target="_blank">Commands</a></li>
+                <li><a href="maintenance" target="_blank">About</a></li>
+                <li><a href="maintenance" target="_blank">Feedback</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 class="main-title">Proxy Checker for Linux</h1>
+            <p class="main-paragraph">A program that will evaluate the functionality of proxies by transmitting requests to assess their operability.</p>
+<a href="proxy_checker_linux64-v1.zip" download>
+            <button class="button">
+                    Download
+            </button>
+</a>
+        </div>
+    </body>
+</html>

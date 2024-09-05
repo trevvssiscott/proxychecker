@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Maintenance Notice</title>
+<link rel="icon" type="image/x-icon" href="proxy_web.ico">
+        <style>
+            /* Import the custom font */
+            @font-face {
+                font-family: 'Steelar';
+                src: url('Steelar-j9Vnj.otf') format('opentype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            /* General body styling */
+            body {
+                background-image: url('background.png'); /* Path to your background image */
+                background-color: #212121; /* Background color as a fallback */
+                background-size: cover; /* Ensure the image covers the entire background */
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Prevent the image from repeating */
+                margin: 0;
+                padding: 0;
+                height: 100vh; /* Ensure the body covers the full height of the viewport */
+                font-family: 'Steelar', sans-serif; /* Apply custom font */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+            }
+
+            /* Fade-in animation */
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            /* Style for the maintenance message */
+            .message {
+                max-width: 800px;
+                font-size: 1.2em;
+                padding: 20px;
+                opacity: 0;
+                animation: fadeIn 1s ease-out forwards;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="message">
+            Our system is presently undergoing maintenance, and the respective websites will be integrated at a later stage. 
+            We appreciate your understanding and patience during this process.
+        </div>
+    </body>
+</html>
